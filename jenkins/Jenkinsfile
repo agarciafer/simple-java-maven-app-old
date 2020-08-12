@@ -12,7 +12,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts artifacts: '/var/jenkins_home/workspace/pipeline-2/target/*.jar', fingerprint: true
+                    archiveArtifacts artifacts: '/var/jenkins_home/workspace/pipeline-2/target/my-app-1.0-SNAPSHOT.jar', fingerprint: true
                 }
             }
         }
