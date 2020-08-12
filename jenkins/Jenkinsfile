@@ -13,7 +13,7 @@ pipeline {
             post {
         failure {
             mail to: 'tartana013@hotmail.com', from: 'tartana013@hotmail.com',
-                subject: "Example Build: ${env.JOB_NAME} - Failed", 
+                subject: "Build: ${env.JOB_NAME} - Failed", 
                 body: "Job Failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}"
         }
     }
@@ -36,7 +36,7 @@ pipeline {
              post {
         failure {
             mail to: 'tartana013@hotmail.com', from: 'tartana013@hotmail.com',
-                subject: "Example Build: ${env.JOB_NAME} - Failed", 
+                subject: "Build: ${env.JOB_NAME} - Failed", 
                 body: "Job Failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}\n\nBlue Ocean:\n${env.RUN_DISPLAY_URL}"
         }
     }
