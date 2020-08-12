@@ -25,5 +25,5 @@ echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 set -x
 java -jar target/${NAME}-${VERSION}.jar
 echo "Copiar a 192.168.33.11"
-scp /jenkins-docker/jenkins_home/workspace/pipeline-2/target 192.168.33.11:/tmp
+scp /var/jenkins_home/workspace/maven-jobs/target/${NAME}-${VERSION}.jar 192.168.33.11:/tmp
 java -jar 192.168.33.11:/tmp/${NAME}-${VERSION}.jar > /tmp/salida${NAME}-${VERSION}
